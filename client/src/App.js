@@ -14,11 +14,11 @@ const App = () => {
   return (
     <div>
       <Link to="/">List</Link>
-      <Link to="/movies/:id">Movie</Link>
+      <Link to="/movies/1">Movie</Link>
       <Link to="/saved-list">Saved</Link>
 
       <Switch>
-        <Route path="saved-list">
+        <Route path="/saved-list">
           <SavedList list={SavedList} />
         </Route>
 
@@ -26,7 +26,7 @@ const App = () => {
           <MovieList />
         </Route>
 
-        <Route path="/movies/:id">
+        <Route path="/movies/1">
           <Movie />
         </Route>
       </Switch>
