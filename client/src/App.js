@@ -20,7 +20,9 @@ const App = () => {
         </Route>
 
         <Route path="/movies/:id">
-          <Movie />
+          <Link>
+          <Movie/>
+          </Link>
         </Route>
       </Switch>
     </div>
