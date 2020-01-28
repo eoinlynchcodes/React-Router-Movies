@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const SavedList = props => (
   <div className="saved-list">
@@ -6,8 +7,19 @@ const SavedList = props => (
     {props.list.map(movie => (
       <span className="saved-movie">{movie.title}</span>
     ))}
-    <div className="home-button">Home</div>
+    <div onClick={bringHome} className="home-button">Home</div>
   </div>
 );
+
+function Component(){
+  const history = useHistory();
+
+  const bringHome = () => {
+    history.push('/');
+  }
+}
+
+
+
 
 export default SavedList;
