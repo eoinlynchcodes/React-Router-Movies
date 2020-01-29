@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 const SavedList = props => (
   <div className="saved-list">
@@ -7,17 +7,19 @@ const SavedList = props => (
     {props.list.map(movie => (
       <span className="saved-movie">{movie.title}</span>
     ))}
-    <div onClick={bringHome} className="home-button">Home</div>
+    <Link to="/">
+      <div className="home-button">Home</div>
+    </Link>
   </div>
 );
 
-function Component(){
-  const history = useHistory();
+// function Component(){
+//   const history = useHistory();
 
-  const bringHome = () => {
-    history.push('/');
-  }
-}
+//   const bringHome = () => {
+//     history.push('/');
+//   }
+// }
 
 
 
